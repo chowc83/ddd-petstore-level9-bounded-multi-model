@@ -1,4 +1,4 @@
-package carpoolreview.domain;
+package com.example.review.domain;
 
 import org.springframework.data.repository.CrudRepository;
 
