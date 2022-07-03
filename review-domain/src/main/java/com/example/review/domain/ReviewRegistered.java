@@ -1,7 +1,7 @@
 package com.example.review.domain;
 
 
-public class ReviewRegistered extends Review {
+public class ReviewRegistered extends AbstractEvent {
 
     private Long id;
     private Reviewer reviewer;
