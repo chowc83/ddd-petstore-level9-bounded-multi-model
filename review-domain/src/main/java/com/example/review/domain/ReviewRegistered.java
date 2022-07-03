@@ -1,5 +1,6 @@
 package com.example.review.domain;
 
+import com.example.review.AbstractEvent;
 
 public class ReviewRegistered extends AbstractEvent {
 

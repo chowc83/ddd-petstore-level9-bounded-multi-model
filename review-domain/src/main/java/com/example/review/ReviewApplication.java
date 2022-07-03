@@ -1,4 +1,4 @@
-package carpoolreview;
+package com.example.review;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -10,8 +10,8 @@ import java.util.List;
 import java.util.stream.Stream;
 
 
-import com.example.petstore.domain.*;
-import com.example.petstore.kafka.KafkaProcessor;
+import com.example.review.domain.*;
+import com.example.review.kafka.KafkaProcessor;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;

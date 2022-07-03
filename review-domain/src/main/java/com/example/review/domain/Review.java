@@ -1,6 +1,5 @@
 package com.example.review.domain;
 
-
 import org.springframework.beans.BeanUtils;
 
 import com.example.review.ReviewApplication;
