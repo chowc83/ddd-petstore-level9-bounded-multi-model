@@ -1,4 +1,4 @@
-package com.example.review.domain;
+package com.example.reviewinfo.domain;
 
 
 public enum ReviewType {

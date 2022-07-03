@@ -1,4 +1,4 @@
-package com.example.review.kafka;
+package com.example.reviewinfo.kafka;
 
 import org.springframework.cloud.stream.annotation.Input;
 import org.springframework.cloud.stream.annotation.Output;

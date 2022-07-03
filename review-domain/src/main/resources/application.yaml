@@ -25,11 +25,11 @@ spring:
                   serde: org.apache.kafka.common.serialization.Serdes$StringSerde
       bindings:
         event-in:
-          group: pet
-          destination: petstore
+          group: review
+          destination: reviewinfo
           contentType: application/json
         event-out:
-          destination: petstore
+          destination: reviewinfo
           contentType: application/json
 
 logging:
@@ -59,9 +59,9 @@ spring:
                   serde: org.apache.kafka.common.serialization.Serdes$StringSerde
       bindings:
         event-in:
-          group: pet
-          destination: petstore
+          group: review
+          destination: reviewinfo
           contentType: application/json
         event-out:
-          destination: petstore
+          destination: reviewinfo
           contentType: application/json

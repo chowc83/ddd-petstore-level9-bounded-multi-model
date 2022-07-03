@@ -1,4 +1,4 @@
-package com.example.review.domain;
+package com.example.reviewinfo.domain;
 
 import org.springframework.data.repository.CrudRepository;
 

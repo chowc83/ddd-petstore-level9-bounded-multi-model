@@ -1,4 +1,4 @@
-package com.example.review;
+package com.example.reviewinfo;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -10,8 +10,8 @@ import java.util.List;
 import java.util.stream.Stream;
 
 
-import com.example.review.domain.*;
-import com.example.review.kafka.KafkaProcessor;
+import com.example.reviewinfo.domain.*;
+import com.example.reviewinfo.kafka.KafkaProcessor;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;

@@ -1,8 +1,8 @@
-package com.example.review.domain;
+package com.example.reviewinfo.domain;
 
 import org.springframework.beans.BeanUtils;
 
-import com.example.review.ReviewApplication;
+import com.example.reviewinfo.ReviewApplication;
 
 import java.util.ArrayList;
 import java.util.List;

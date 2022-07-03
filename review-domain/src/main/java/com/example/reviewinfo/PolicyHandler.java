@@ -1,6 +1,6 @@
-package com.example.review;
+package com.example.reviewinfo;
 
-import com.example.review.kafka.KafkaProcessor;
+import com.example.reviewinfo.kafka.KafkaProcessor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.stream.annotation.StreamListener;
 import org.springframework.messaging.handler.annotation.Payload;

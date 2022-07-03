@@ -1,6 +1,6 @@
-package com.example.review;
+package com.example.reviewinfo;
 
-import com.example.review.kafka.KafkaProcessor;
+import com.example.reviewinfo.kafka.KafkaProcessor;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.messaging.MessageChannel;
