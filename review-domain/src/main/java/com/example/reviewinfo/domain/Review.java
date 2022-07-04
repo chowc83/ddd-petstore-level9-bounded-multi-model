@@ -1,49 +1,39 @@
 package com.example.reviewinfo.domain;
 
-import org.springframework.beans.BeanUtils;
-
 import com.example.reviewinfo.ReviewApplication;
 
-import java.util.ArrayList;
-import java.util.List;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
-
+@Getter
+@NoArgsConstructor
 @Entity
 @Table(name = "Review_table")
 
 public class Review {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
   
-    public Long getId() {
-        return id;
-    }
-    
-    @Embedded
-    private Reviewer reviewer;
-
-    @Enumerated(EnumType.STRING)
-    private ReviewType reviewType;
+    @Column(name = "REVIEWER_ID", nullable = false)
+    private Long reviewerId;
 
     @Embedded
     private ReviewTarget reviewTarget;
- 
+
+    @Column(name = "REVIEW_SCORE", nullable = false)
     @Enumerated(EnumType.STRING)
     private ReviewScore reviewScore;
 
-    //private String comment;
-
-
+    @Column(name = "COMMENT", nullable = false)
+    private String comment;
 
 
     @PostPersist
     public void onPostPersist() {
-        ReviewRegistered reviewRegistered = new ReviewRegistered();
-        reviewRegistered.setId(this.getId());
+        ReviewRegistered reviewRegistered = new ReviewRegistered(this);
         reviewRegistered.publishAfftercommit();
     }
 

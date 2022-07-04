@@ -1,29 +1,25 @@
 package com.example.reviewinfo.domain;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.Column;
 import javax.persistence.Embeddable;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 
-
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
 @Embeddable
-
 public class ReviewTarget {
 
+    @Column(name = "REVIEWTARGET_ID", nullable = false)
     private Long reviewTargetId;
 
-    private String reviewTargetNm;
+    @Column(name = "CARPOOL_ROLE", nullable = false)
+    @Enumerated(EnumType.STRING)
+    private CarpoolRole carpoolRole;
 
-    public Long getReviewTargetId() {
-        return reviewTargetId;
-    }
-
-    public void setReviewTargetId(Long reviewTargetId) {
-        this.reviewTargetId = reviewTargetId;
-    }
-
-    public String getReviewTargetNm() {
-        return reviewTargetNm;
-    }
-
-    public void setReviewTargetNm(String reviewTargetNm) {
-        this.reviewTargetNm = reviewTargetNm;
-    }
 }
