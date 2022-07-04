@@ -1,7 +1,5 @@
 package com.example.reviewinfo.domain;
 
-import com.example.reviewinfo.ReviewApplication;
-
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -16,7 +14,7 @@ public class Review {
 
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-  
+
     @Column(name = "REVIEWER_ID", nullable = false)
     private Long reviewerId;
 
@@ -31,16 +29,10 @@ public class Review {
     private String comment;
 
 
-    @PostPersist
-    public void onPostPersist() {
-        ReviewRegistered reviewRegistered = new ReviewRegistered(this);
-        reviewRegistered.publishAfftercommit();
-    }
-
-    public static ReviewRepository repository() {
-        ReviewRepository reviewRepository = ReviewApplication.applicationContext.getBean(
-            ReviewRepository.class
-        );
-        return reviewRepository;
+    public Review(Long reviewerId, ReviewTarget reviewTarget, ReviewScore reviewScore, String comment) {
+        this.reviewerId = reviewerId;
+        this.reviewTarget = reviewTarget;
+        this.reviewScore = reviewScore;
+        this.comment = comment;
     }
 }
